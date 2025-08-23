@@ -1,11 +1,19 @@
-site_name: 张逸安的主页
+site_name: 张逸安
 
 theme:
   name: material
   features:
     - navigation.tabs
+    - navigation.footer
   language: zh
 
 nav:
-- Home: index.md
-- About: about.md
+  - Home: index.md
+  - About: about.md
+
+extra:
+  social:
+    - icon: simple/qq
+      link: mailto:2332309318@qq.com
+    - icon: simple/github
+      link: https://github.com/tsincy-peacy
