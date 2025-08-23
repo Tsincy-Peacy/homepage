@@ -1,0 +1,11 @@
+site_name: 张逸安的主页
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+  language: zh
+
+nav:
+- Home: index.md
+- About: about.md
