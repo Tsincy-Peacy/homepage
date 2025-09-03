@@ -9,6 +9,7 @@ theme:
 nav:
   - Home: index.md
   - About: about.md
+  - Glossary: glossary.md
 
 extra:
   social:
