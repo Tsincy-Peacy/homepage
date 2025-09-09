@@ -9,6 +9,7 @@ theme:
 nav:
   - Home: index.md
   - About: about.md
+  - Todo: todo.md
   - Glossary: glossary.md
 
 extra:
@@ -17,3 +18,18 @@ extra:
       link: mailto:2332309318@qq.com
     - icon: simple/github
       link: https://github.com/tsincy-peacy
+
+markdown_extensions:
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css
