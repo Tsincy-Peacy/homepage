@@ -9,7 +9,7 @@ theme:
 nav:
   - Home: index.md
   - About: about.md
-  - Todo: todo.md
+  - Recent: recent.md
   - Glossary: glossary.md
 
 extra:
