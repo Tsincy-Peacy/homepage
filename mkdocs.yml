@@ -9,8 +9,8 @@ theme:
 nav:
   - Home: index.md
   - About: about.md
-  - Recent: recent.md
   - Glossary: glossary.md
+  - Support: support.md
 
 extra:
   social:
@@ -21,6 +21,8 @@ extra:
 
 markdown_extensions:
   - def_list
+  - pymdownx.caret
+  - pymdownx.tilde
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.arithmatex:
