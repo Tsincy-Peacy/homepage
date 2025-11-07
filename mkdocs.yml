@@ -9,8 +9,16 @@ theme:
 nav:
   - Home: index.md
   - About: about.md
+  - Schedule: schedule.md
   - Glossary: glossary.md
   - Support: support.md
+  - Teaching:
+    - Lecture 1: lectures/lecture01.md
+    - Lecture 2: lectures/lecture02.md
+    - Lecture 3: lectures/lecture03.md
+    - Lecture 4: lectures/lecture04.md
+    - Lecture 5: lectures/lecture05.md
+    - Lecture 6: lectures/lecture06.md
 
 extra:
   social:
