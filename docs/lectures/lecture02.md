@@ -176,13 +176,15 @@ start:
     mov cx, 5
 s:
     mov al, [bx]
-    and al, 1101111b
+    and al, 11011111b
     mov [bx], al
     inc bx
     loop s
+
+    mov cx, 11
 s0:
     mov al, [bx]
-    or al, al, 0010000b
+    or al, 00100000b
     mov [bx], al
     inc bx
     loop s0
@@ -219,7 +221,7 @@ s:
     mov al, [bx]
     and a1, 11011111b
     mov [bx], al
-    mov al, [bx]
+    mov al, [5+bx]
     or al, 00100000b
     mov [5+bx], al
     inc bx

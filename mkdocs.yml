@@ -9,6 +9,7 @@ theme:
 nav:
   - Home: index.md
   - About: about.md
+  - Schedule: schedule.md
   - Glossary: glossary.md
   - Support: support.md
   - Teaching:
