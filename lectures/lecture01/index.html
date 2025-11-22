@@ -1,0 +1,1713 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../support/">
+      
+      
+        <link rel="next" href="../lecture02/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Lecture 1 - 张逸安</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="张逸安" class="md-header__button md-logo" aria-label="张逸安" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            张逸安
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lecture 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../schedule/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Schedule
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../glossary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../support/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Support
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Teaching
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="张逸安" class="md-nav__button md-logo" aria-label="张逸安" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    张逸安
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teaching
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Teaching
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 1
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一章：基础知识
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一章：基础知识">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么要设计汇编语言，而不是用机器码编程？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        汇编语言的产生
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        汇编语言的组成
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        存储器的作用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        指令和数据
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        存储单元
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        总线
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二章：寄存器
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第二章：寄存器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        什么是寄存器？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        通用寄存器
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        几条汇编指令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8086-cpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8086 CPU 给出物理地址的方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        什么是段？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cs-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何改变 CS 和 IP？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三章：内存访问
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第三章：内存访问">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        大尾端和小尾端
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        存取数据
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        栈
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四章：第一个程序
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第四章：第一个程序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        分析下面的汇编代码
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bx-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第五章：[BX] 和 loop 指令
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第五章：[BX] 和 loop 指令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        什么是 [BX]？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        什么是 loop？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-bx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        loop 和 [bx] 的联合使用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        什么是段前缀？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一章：基础知识
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一章：基础知识">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么要设计汇编语言，而不是用机器码编程？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        汇编语言的产生
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        汇编语言的组成
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        存储器的作用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        指令和数据
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        存储单元
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        总线
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二章：寄存器
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第二章：寄存器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        什么是寄存器？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        通用寄存器
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        几条汇编指令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8086-cpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8086 CPU 给出物理地址的方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        什么是段？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cs-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何改变 CS 和 IP？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三章：内存访问
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第三章：内存访问">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        大尾端和小尾端
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        存取数据
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        栈
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四章：第一个程序
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第四章：第一个程序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        分析下面的汇编代码
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bx-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第五章：[BX] 和 loop 指令
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第五章：[BX] 和 loop 指令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        什么是 [BX]？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        什么是 loop？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-bx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        loop 和 [bx] 的联合使用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        什么是段前缀？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">汇编语言第一讲</h1>
+<h2 id="_2">第一章：基础知识</h2>
+<h3 id="_3">为什么要设计汇编语言，而不是用机器码编程？</h3>
+<p>机器码就是一堆0/1串，极难辨识，且发生错误人眼很难找到问题。比如找出这两条指令的不同之处：</p>
+<p><code>1001001110010010</code> 和 <code>1001001100010010</code></p>
+<h3 id="_4">汇编语言的产生</h3>
+<p>每条指令有特定的作用，比如将寄存器 <code>BX</code> 的内容送到 <code>AX</code>，可以记为 <code>mov ax, bx</code>，一目了然。</p>
+<h3 id="_5">汇编语言的组成</h3>
+<ul>
+<li>
+<p>汇编指令：一个汇编指令对应一条机器码。</p>
+</li>
+<li>
+<p>伪指令：一个伪指令是由多条汇编指令组成，这主要是为了便于使用，在执行时先由编译器展开为多条汇编指令。</p>
+</li>
+<li>
+<p>其他符号：+、-、*、/ 等。</p>
+</li>
+</ul>
+<h3 id="_6">存储器的作用</h3>
+<p>CPU 与存储器的关系，类似于大脑与记忆的关系，CPU 负责数据的控制和运算，存储器负责数据的存放和读取。</p>
+<h3 id="_7">指令和数据</h3>
+<p>在 16 位 8086 处理器中，指令和数据都是 16 位，那么 CPU 如何区分一段数字是指令还是数据？事实上，如何看待取决于你的处理方式，比如 <code>1000100111011000</code> 可以是指令 <code>mov ax, bx</code>（指令），也可以是 <code>89D8H</code>（数据）。</p>
+<p>指令和数据都存放于存储器中。</p>
+<h3 id="_8">存储单元</h3>
+<p>对于 16 位的 8086 处理器而言，其地址线为 20 位，对应 <span class="arithmatex">\(2^{20}\)</span> 个地址（0 ~ <span class="arithmatex">\(2^{20}-1\)</span>），每个地址对应一个存储单元，每个存储单元是一个 8 bit 的字节，即这样的存储器可以存放 <span class="arithmatex">\(2^{20}\)</span> 个 Byte。</p>
+<p>通常使用 B 来代替 Byte，内存换算关系：</p>
+<p>1 KB = 1024 B</p>
+<p>1 MB = 1024 KB</p>
+<p>1 GB = 1024 MB</p>
+<p>1 TB = 1024 GB</p>
+<p>PS：字是处理器能够处理的最大数据单位，对于 8086，一个字表示两个字节，即 1 W = 2 B。</p>
+<h3 id="_9">总线</h3>
+<p>总线分为数据总线、地址总线和控制总线，了解即可，对于汇编语言的学习没有太多影响。CPU、存储器和外界设备通过总线交换数据。</p>
+<p>这些设备在物理上是独立的，但对于 CPU 而言，它们只是对应不同的总线地址，例如 <code>00000</code> ~ <code>9FFFF</code> 对应 RAM，<code>A0000</code> ~ <code>BFFFF</code> 对应显存，<code>C0000</code> ~ <code>FFFFF</code> 对应 ROM</p>
+<h2 id="_10">第二章：寄存器</h2>
+<h3 id="_11">什么是寄存器？</h3>
+<p>顾名思义，寄存器就是寄存数据的器件，它是 CPU 内部的部件，可以通过指令将数据存放在寄存器中，也可以通过指令读取寄存器中存放的数据。</p>
+<p>16 位 8086 处理器的所有寄存器都是 16 位，即一个字。</p>
+<h3 id="_12">通用寄存器</h3>
+<p><code>AX</code>、<code>BX</code>、<code>CX</code>、<code>DX</code> 这四个寄存器通常用来存放一般性的数据，被称为通用寄存器。这四个寄存器都可以分为高位寄存器和低位寄存器，如 <code>AX</code> 分为 <code>AH</code> 和 <code>AL</code>。</p>
+<h3 id="_13">几条汇编指令</h3>
+<p><code>mov ax, 18</code>：<code>AX</code> = 18。</p>
+<p><code>mov ah, 78</code>：<code>AH</code> = 78（思考和 <code>AX</code> 的区别）。</p>
+<p><code>add ax, 7</code>：<code>AX</code> = <code>AX</code> + 7。</p>
+<p><code>sub bx, [9]</code>：<code>BX</code> = <code>BX</code> - <code>memory[DS:9]</code>。</p>
+<p><code>mov ax, bx</code>：<code>BX</code> = <code>AX</code>。</p>
+<p><code>add ax, bx</code>：<code>AX</code> = <code>AX</code> + <code>BX</code>。</p>
+<h3 id="8086-cpu">8086 CPU 给出物理地址的方法</h3>
+<p>我们知道，8086 的寄存器是 16 位，而地址总线为 20 位，如何用 16 位的寄存器给出 20 位的地址呢？答案是使用两个寄存器。第一个寄存器给出高 16 位，称为段地址；第二个寄存器给出低 16 位，称为偏移地址，然后将他们相加。</p>
+<p>例如，一个寄存器给出高位为 <code>1230H</code>，另一个寄存器给出低位为 <code>00C8H</code>，由于高位寄存器无法表示后四位，故将其补充为 <code>12300H</code>，与低位相加得到 <code>123C8H</code>。补充后四位又叫“左移四位”。</p>
+<p>由于左移四位又可以写成乘以 16，所以上述方法可以写为：物理地址 = 段地址 x 16 + 偏移地址。</p>
+<h3 id="_14">什么是段？</h3>
+<p>段是一片连续的内存，这是一个人为定义，而不是内存本来就是分段的。例如你可以规定 <code>10000H ~ 100FFH</code> 为一个段，也可以将 <code>10000H</code> ~ <code>1007FH</code> 和 <code>10080H</code> ~ <code>100FFH</code> 定义为两个分段。</p>
+<p>8086 有四个段寄存器：<code>CS</code>、<code>DS</code>、<code>SS</code> 和 <code>ES</code>。</p>
+<p>本次讲义只关心 <code>CS</code>。</p>
+<p><code>CS</code> 是 Code Segment，<code>IP</code> 是 Instruction Pointer，它们指示了读取指令的地址。如果 <code>CS</code> 中的内容为 M，<code>IP</code> 中的内容为 N，那么 8086 将从 16 x M + N 的内存处读取一条指令并执行。我们将这样的计算形式简写为 <code>M:N</code>。</p>
+<h3 id="cs-ip">如何改变 <code>CS</code> 和 <code>IP</code>？</h3>
+<p>很遗憾，我们并不能像使用 <code>mov</code> 修改 <code>AX</code> 那样来随意修改 <code>CS</code> 和 <code>IP</code>，8086 禁止用户这样做。但我们可以使用专用的指令来做到一定程度的修改，这里介绍一个最简单的指令：<code>jmp</code>。</p>
+<p><code>jmp segment:offset</code>：<code>CS</code> = segment，<code>IP</code> = offset。</p>
+<p><code>jmp register</code>：<code>IP</code> = register。</p>
+<p>例如，<code>jmp 2AE3:3</code> 表示 <code>CS</code> = 2AE3，<code>IP</code> = 3；<code>jmp ax</code> 表示 <code>IP</code> = <code>AX</code>。</p>
+<p>思考：以下代码段的执行顺序。</p>
+<pre><code>初始条件：CS = 2000H，IP = 0000H
+
+10000H: mov ax, 0123H
+10003H: mov ax, 0000
+10006H: mov bx, ax
+10008H: jmp bx
+...
+20000H: mov ax, 6622H
+20003H: jmp 1000:3
+20008H: mov cx, ax
+</code></pre>
+<h2 id="_15">第三章：内存访问</h2>
+<h3 id="_16">大尾端和小尾端</h3>
+<p>8086 是小尾端的机器。尾端指的是有效数据最低位，大尾端指的是这个最低位存储在高地址，小尾端则是存储在低地址。</p>
+<p>例如将 0123H 存储在 8086 的内存中，则按照内存顺序，0 地址处存放 01H，1 地址处存放 23H。</p>
+<h3 id="_17">存取数据</h3>
+<p>在第二章中我们讲解了 8086 如何使用 <code>CS</code> 和 <code>IP</code> 读取指令，当需要操作数据时，8086 使用的寄存器是 <code>DS</code>，偏移则使用 <code>[address]</code>。</p>
+<p>下面三条指令将 <code>10000H</code>（1000:0）的数据读取到 <code>AL</code> 中：</p>
+<pre><code>mov bx, 1000H
+mov ds, bx
+mov al, [0]
+
+; 注意，不能直接把立即数（1000H）直接写入 DS，这是硬件问题
+</code></pre>
+<h3 id="_18">栈</h3>
+<p>栈就是一个泡腾片的瓶子，放入泡腾片，只能倒着拿出来。在 8086 处理器中，栈每次可以送入一个字，或者弹出一个字。与指令段和数据段类似，栈使用 <code>SS:SP</code> 来表示栈的位置，<code>SS x 16 + SP</code> 指向最后一次送入的“泡腾片”的位置。栈由地址高位向地址低位生长，例如，<code>SP</code> 初始时为 <code>FFFEH</code>，送入一个字变为 <code>FFFCH</code>，再送入一个字变为 <code>FFFAH</code>；此时，弹出一个字变为 <code>FFFCH</code>，再弹出一个字变为 <code>FFFEH</code>。</p>
+<p>示例指令为：</p>
+<pre><code>mov ax, 0123H ; AX = 0123H
+push ax       ; AX 的值送入栈: -&gt; 0123H, SP -= 2
+mov bx, 2266H ; BX = 2266H
+push bx       ; BX 的值送入栈: -&gt; 2266H, 0123H, SP -= 2
+pop cx        ; 弹出 2266H, CX = 2266H, SP += 2
+pop dx        ; 弹出 0123H, DX = 0123H, SP += 2
+</code></pre>
+<h2 id="_19">第四章：第一个程序</h2>
+<p>创建一个程序的流程：写代码 -&gt; 编译 -&gt; 执行</p>
+<h3 id="_20">分析下面的汇编代码</h3>
+<pre><code>assume cs:codesg
+
+codesg segment
+
+    mov ax, 0123H
+    mov bx, 0456H
+    add ax, bx
+    add ax, ax
+
+    mov ax, 4c00H
+    int 21H
+
+codesg ends
+
+end
+</code></pre>
+<ul>
+<li>
+<p><code>assume 段寄存器:段名</code>，将某个段名与段寄存器联系起来。</p>
+</li>
+<li>
+<p><code>段名 segment ... 段名 ends</code>，定义一个段。</p>
+</li>
+<li>
+<p><code>end</code>，表示源代码的结束。</p>
+</li>
+<li>
+<p><code>mov ax, 4c00H</code> + <code>int 21H</code>，表示代码返回（暂时不需要了解）。</p>
+</li>
+</ul>
+<h2 id="bx-loop">第五章：<code>[BX]</code> 和 <code>loop</code> 指令</h2>
+<p>在内容开始之前，定义几个约定的符号。</p>
+<ul>
+<li>
+<p><code>(ax)</code> 表示 <code>AX</code> 存放的数据，<code>(10000H)</code> 表示内存单元 <code>[1000:0]</code> 存放的数据。</p>
+</li>
+<li>
+<p><code>idata</code> 表示一个数字，例如 <code>mov ax, idata</code>。</p>
+</li>
+</ul>
+<h3 id="bx">什么是 <code>[BX]</code>？</h3>
+<p>我们知道 <code>[0]</code> 是一个内存单元，它表示 <code>DS:0</code>，<code>[BX]</code> 同样如此，它表示 <code>DS:BX</code>。</p>
+<p>以下代码是合法的：</p>
+<pre><code>mov ax, [bx]
+mov al, [bx]
+</code></pre>
+<h3 id="loop">什么是 loop？</h3>
+<p>这里给出一段循环代码：</p>
+<pre><code>assume cs:code
+
+code segment
+
+    mov ax, 2
+    mov cx, 11
+s:
+    add ax, ax
+    loop s
+
+    mov ax, 4c00h
+    int 21h
+
+code ends
+
+end
+</code></pre>
+<ul>
+<li>
+<p><code>mov cx, 11</code>：<code>CX</code> 是 Counter Register，用来计数，这里表示循环执行 11 次。</p>
+</li>
+<li>
+<p><code>s:</code>：s 是一个循环标记，与 <code>loop s</code> 配合使用。</p>
+</li>
+<li>
+<p><code>loop s</code>：跳转到循环标记 s 处执行。</p>
+</li>
+</ul>
+<h3 id="loop-bx"><code>loop</code> 和 <code>[bx]</code> 的联合使用</h3>
+<p>这里给出一段代码：</p>
+<pre><code>assume cs:code
+
+code segment
+
+    mov ax, 0ffffh
+    mov ds, ax
+    mov bx, 0
+    mov cx, 12
+s:
+    mov al, [bx]
+    mov ah, 0
+    add dx, ax
+    inc bx
+    loop s
+
+    mov ax, 4c00h
+    int 21h
+
+code ends
+
+end
+</code></pre>
+<ul>
+<li>
+<p>第一步：将 <code>DS</code> 定位到 <code>FFFF:0</code>。</p>
+</li>
+<li>
+<p>第二步：设置 <code>BX</code> 偏移为 0。</p>
+</li>
+<li>
+<p>第三步：将循环计数器 <code>CX</code> 设置为 12。</p>
+</li>
+<li>
+<p>第四步：进入循环，<code>AX</code> = <code>(DS:BX)</code>，<code>DX</code> += <code>AX</code>，<code>BX</code>++。</p>
+</li>
+<li>
+<p>第五步：退出程序。</p>
+</li>
+</ul>
+<h3 id="_21">什么是段前缀？</h3>
+<p><code>mov ax, cs:[bx]</code>，这里的 <code>cs:</code> 就是段前缀。</p>
+<p>存取数据默认的段前缀为 <code>ds:</code>，显示地修改可以改变指令行为。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:2332309318@qq.com" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.395 15.035a40 40 0 0 0-.803-2.264l-1.079-2.695c.001-.032.014-.562.014-.836C19.526 4.632 17.351 0 12 0S4.474 4.632 4.474 9.241c0 .274.013.804.014.836l-1.08 2.695a39 39 0 0 0-.802 2.264c-1.021 3.283-.69 4.643-.438 4.673.54.065 2.103-2.472 2.103-2.472 0 1.469.756 3.387 2.394 4.771-.612.188-1.363.479-1.845.835-.434.32-.379.646-.301.778.343.578 5.883.369 7.482.189 1.6.18 7.14.389 7.483-.189.078-.132.132-.458-.301-.778-.483-.356-1.233-.646-1.846-.836 1.637-1.384 2.393-3.302 2.393-4.771 0 0 1.563 2.537 2.103 2.472.251-.03.581-1.39-.438-4.673"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/tsincy-peacy" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
