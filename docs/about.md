@@ -20,9 +20,9 @@
 
 - [2025年全国计算机教学案例大赛二等奖](./certificates/全国计算机教学案例大赛.pdf)
 
-- 2025年优秀学生奖金奖
-
 - [2024年RoboGame二等奖](./certificates/RoboGame2024.pdf)
+
+- 2025年优秀学生奖金奖
 
 - [2024年优秀学生奖银奖](https://cs.ustc.edu.cn/2024/1223/c3054a669544/page.htm)
 
