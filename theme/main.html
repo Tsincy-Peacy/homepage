@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="{{ page.meta.lang | default('en') if page else 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>{{ page.meta.title | default(config.site_name) if page else 'Page not found' }}</title>
+  <meta name="description" content="{{ page.meta.description | default(config.site_description) if page else config.site_description }}">
+  <meta name="author" content="{{ config.site_author }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page.meta.title | default(config.site_name) if page else 'Page not found' }}">
+  <meta property="og:description" content="{{ page.meta.description | default(config.site_description) if page else config.site_description }}">
+  {% if page and page.canonical_url %}<link rel="canonical" href="{{ page.canonical_url }}">
+  <meta property="og:url" content="{{ page.canonical_url }}">{% endif %}
+  {% if page and page.meta.translation %}
+  <link rel="alternate" hreflang="en" href="{{ config.site_url }}">
+  <link rel="alternate" hreflang="zh-CN" href="{{ config.site_url }}zh/">
+  <link rel="alternate" hreflang="x-default" href="{{ config.site_url }}">
+  {% endif %}
+  <link rel="icon" href="{{ 'images/favicon.svg' | url }}" type="image/svg+xml">
+  {% for path in config.extra_css %}<link rel="stylesheet" href="{{ path | url }}">{% endfor %}
+</head>
+<body>
+  {% set chinese = page and page.meta.lang == 'zh-CN' and page.meta.layout == 'home' %}
+  <a class="skip-link" href="#main-content">{{ '跳至正文' if chinese else 'Skip to content' }}</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="{{ ('zh/' if chinese else 'index.html') | url }}" aria-label="Yi Zhang — home">YZ<span aria-hidden="true">.</span></a>
+      <nav class="site-nav" aria-label="{{ '主导航' if chinese else 'Main navigation' }}">
+        <a href="{{ ('zh/' if chinese else 'index.html') | url }}"{% if page and page.meta.layout == 'home' %} aria-current="page"{% endif %}>{{ '简介' if chinese else 'About' }}</a>
+        <a href="{{ ('zh/' if chinese else 'index.html') | url }}#research">{{ '研究' if chinese else 'Research' }}</a>
+        <a href="{{ ('zh/' if chinese else 'index.html') | url }}#honors">{{ '荣誉' if chinese else 'Honors' }}</a>
+        <a href="{{ ('zh/' if chinese else 'index.html') | url }}#contact">{{ '联系' if chinese else 'Contact' }}</a>
+      </nav>
+      {% if chinese %}<a class="language-link" href="{{ 'index.html' | url }}" lang="en" aria-label="Read the English profile">EN <span aria-hidden="true">↗</span></a>
+      {% else %}<a class="language-link" href="{{ 'zh/' | url }}" lang="zh-CN" aria-label="阅读中文简介">中文 <span aria-hidden="true">↗</span></a>{% endif %}
+    </div>
+  </header>
+  {% if page and page.meta.layout == 'home' %}
+  <main id="main-content" class="home-layout" tabindex="-1">
+    <aside class="profile" aria-label="{{ '个人信息' if chinese else 'Profile' }}">
+      <div class="profile-mark" aria-hidden="true">yz<span>.</span></div>
+      <h1>Yi Zhang <span lang="zh-CN">张义</span></h1>
+      <p class="profile-role">{{ '研究生一年级' if chinese else 'First-year graduate student' }}</p>
+      <p class="profile-affiliation">{{ '人工智能与数据科学学院' if chinese else 'School of Artificial Intelligence and Data Science' }}</p>
+      <p class="profile-university">{{ '中国科学技术大学' if chinese else 'University of Science and Technology of China' }}</p>
+      <div class="profile-links">
+        <a href="mailto:{{ config.extra.email }}">{{ '电子邮件' if chinese else 'Email' }} <span aria-hidden="true">↗</span></a>
+        <a href="{{ config.extra.github }}">GitHub <span aria-hidden="true">↗</span></a>
+        <a href="{{ 'about/' | url }}">{{ '学术背景' if chinese else 'Academic background' }} <span aria-hidden="true">→</span></a>
+      </div>
+    </aside>
+    <div class="home-content">{{ page.content }}</div>
+  </main>
+  {% else %}
+  <main id="main-content" class="article-layout" tabindex="-1">
+    <aside class="article-aside">
+      <a class="back-link" href="{{ 'index.html' | url }}">← Back to profile</a>
+      {% if page and page.toc %}
+      <nav class="page-toc" aria-label="On this page">
+        <p class="eyebrow">On this page</p>
+        {% for top in page.toc %}{% for item in top.children %}<a href="{{ item.url }}">{{ item.title }}</a>{% endfor %}{% endfor %}
+      </nav>
+      {% endif %}
+    </aside>
+    <article class="article-content">
+      {% block content %}{{ page.content if page else '' }}{% endblock %}
+    </article>
+  </main>
+  {% endif %}
+  <footer class="site-footer">
+    <span>{{ '张义' if chinese else 'Yi Zhang' }}</span>
+    <a href="#main-content">{{ '返回顶部' if chinese else 'Back to top' }} ↑</a>
+  </footer>
+</body>
+</html>

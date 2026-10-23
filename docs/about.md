@@ -1,31 +1,33 @@
-# 个人简介
+---
+title: Academic background
+description: Education and honors of Yi Zhang (张义), a graduate student at the University of Science and Technology of China.
+---
 
-张义，笔名张逸安
+# Academic background
 
-### 籍贯
+I am **Yi Zhang (张义)**, a first-year graduate student at the **University of Science and Technology of China (USTC)**. My research focuses on **brain-inspired neural networks**.
 
-- 山西省忻州市
+## Education
 
-### 学习经历
+**University of Science and Technology of China**<br>
+First-year graduate student in the School of Artificial Intelligence and Data Science
 
-- 朔州市元博中学
+**University of Science and Technology of China**<br>
+Undergraduate studies in the School of Computer Science and Technology
 
-- 朔州市朔城区第一中学
+## Honors & awards
 
-- 中国科学技术大学，计算机学院大四在读
+| Year | Recognition |
+| --- | --- |
+| 2026 | Outstanding Graduate, university-level recognition, USTC |
+| 2025 | Second Prize, National Undergraduate Smart Car Competition, **Anhui regional division**, hovercraft off-road category ([Certificate](certificates/全国大学生智能车竞赛.pdf)) |
+| 2025 | Second Prize, National Computer Teaching Case Competition ([Certificate](certificates/全国计算机教学案例大赛.pdf)) |
+| 2025 | Outstanding Student Award, Gold |
+| 2024 | Second Prize, RoboGame ([Certificate](certificates/RoboGame2024.pdf)) |
+| 2024 | Outstanding Student Award, Silver |
+| 2023 | Outstanding Student Award, Bronze |
 
-### 获得奖项
+## Contact
 
-- [2026年校级优秀毕业生]
-
-- [2025年全国大学生智能车竞赛安徽赛区气垫越野组二等奖](./certificates/全国大学生智能车竞赛.pdf)
-
-- [2025年全国计算机教学案例大赛二等奖](./certificates/全国计算机教学案例大赛.pdf)
-
-- [2024年RoboGame二等奖](./certificates/RoboGame2024.pdf)
-
-- 2025年优秀学生奖金奖
-
-- [2024年优秀学生奖银奖](https://cs.ustc.edu.cn/2024/1223/c3054a669544/page.htm)
-
-- 2023年优秀学生奖铜奖
+- **Email:** [2332309318@qq.com](mailto:2332309318@qq.com)
+- **GitHub:** [tsincy-peacy](https://github.com/tsincy-peacy)

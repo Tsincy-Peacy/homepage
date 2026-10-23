@@ -1,2 +1,5 @@
 workbuddy/
 .venv/
+site/
+__pycache__/
+.qa/

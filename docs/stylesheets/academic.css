@@ -1,0 +1,833 @@
+/* Typography-led academic profile, with no remote font dependency. */
+
+:root {
+  --paper: #faf9f6;
+  --ink: #243337;
+  --muted: #626b6b;
+  --accent: #28605b;
+  --line: #dedfd7;
+  --serif: Georgia,"Times New Roman","Noto Serif SC","Songti SC",SimSun,serif;
+  --sans: Inter,"Segoe UI","Noto Sans SC","Microsoft YaHei",sans-serif
+}
+
+* {
+  box-sizing: border-box
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.8 var(--sans);
+  -webkit-font-smoothing: antialiased
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: color .15s ease
+}
+
+a:hover {
+  color: #142f2c;
+  text-decoration: underline
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+  border-radius: 1px
+}
+
+::selection {
+  background: #dce6de
+}
+
+.skip-link {
+  position: fixed;
+  left: 20px;
+  top: -100px;
+  background: var(--ink);
+  color: white;
+  padding: 8px 16px;
+  z-index: 50
+}
+
+.skip-link:focus {
+  top: 12px;
+  color: white
+}
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: var(--paper)
+}
+
+.header-inner {
+  max-width: 1160px;
+  margin: auto;
+  min-height: 91px;
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  gap: 44px
+}
+
+.wordmark {
+  font: 700 29px/1 var(--serif);
+  letter-spacing: -2px;
+  color: var(--ink);
+  text-decoration: none
+}
+
+.wordmark span {
+  color: #9a7140
+}
+
+.site-nav {
+  display: flex;
+  gap: 30px;
+  margin-left: auto
+}
+
+.site-nav a {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 8px 0;
+  position: relative
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current] {
+  color: var(--ink)
+}
+
+.site-nav a[aria-current]:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent)
+}
+
+.language-link {
+  font-size: 12px;
+  color: var(--muted);
+  border-left: 1px solid var(--line);
+  padding-left: 25px;
+  white-space: nowrap;
+  text-decoration: none
+}
+
+.language-link span {
+  margin-left: 6px
+}
+
+.home-layout {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 76px 40px 86px;
+  display: grid;
+  grid-template-columns: 242px minmax(0,1fr);
+  column-gap: 84px;
+  align-items: start
+}
+
+.profile {
+  position: sticky;
+  top: 46px
+}
+
+.profile-mark {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8ece5;
+  color: #294840;
+  font: italic 44px/1 var(--serif);
+  letter-spacing: -4px;
+  margin-bottom: 30px;
+  border-radius: 50%
+}
+
+.profile-mark span {
+  color: #9a7140
+}
+
+.profile h1 {
+  font: 400 39px/1.15 var(--serif);
+  letter-spacing: -1.6px;
+  margin: 0 0 20px
+}
+
+.profile h1 span {
+  display: block;
+  font: 400 18px/1.6 var(--sans);
+  letter-spacing: 3px;
+  margin-top: 12px
+}
+
+.profile p {
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 0 0 14px
+}
+
+.profile .profile-role {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px
+}
+
+.profile-affiliation {
+  color: var(--muted)
+}
+
+.profile-university {
+  max-width: 225px
+}
+
+.profile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+  margin-top: 24px
+}
+
+.profile-links a {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  max-width: 215px;
+  font-size: 13px;
+  text-decoration: none
+}
+
+.profile-links a:hover {
+  text-decoration: underline
+}
+
+.profile-links span {
+  color: var(--muted)
+}
+
+.eyebrow {
+  font: 500 10px/1.6 var(--sans);
+  letter-spacing: 1.9px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 20px
+}
+
+.intro {
+  padding-bottom: 48px
+}
+
+.intro .intro-title {
+  font: 400 clamp(36px,4.1vw,54px)/1.12 var(--serif);
+  letter-spacing: -1.8px;
+  margin: 20px 0 28px;
+  color: #1d363a
+}
+
+.intro>p:not(.eyebrow) {
+  max-width: 685px;
+  font-size: 15px;
+  line-height: 1.95;
+  color: #485457;
+  margin: 0 0 18px
+}
+
+strong {
+  font-weight: 600;
+  color: var(--ink)
+}
+
+.text-link {
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 8px
+}
+
+.text-link span {
+  margin-left: 10px
+}
+
+.academic-section {
+  border-top: 1px solid var(--line);
+  padding: 31px 0 37px;
+  scroll-margin-top: 30px
+}
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+  margin-bottom: 25px
+}
+
+.section-heading h2 {
+  font: 400 27px/1.25 var(--serif);
+  letter-spacing: -.45px;
+  margin: 0
+}
+
+.home-content h3 {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 600;
+  margin: 0 0 8px
+}
+
+.home-content h3 a {
+  text-decoration: none;
+  color: var(--ink)
+}
+
+.home-content h3 a:hover {
+  color: var(--accent);
+  text-decoration: underline
+}
+
+.academic-section>p {
+  font-size: 14px;
+  line-height: 1.85;
+  color: #596264;
+  margin: 8px 0 14px
+}
+
+.honor-list {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 22px
+}
+
+.honor {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 18px;
+  line-height: 1.6;
+  font-size: 13px
+}
+
+.honor-year {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  font-size: 12px;
+  padding-top: 2px
+}
+
+.honor strong,
+.honor div>span {
+  display: block
+}
+
+.honor div>span {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 5px
+}
+
+.honor a {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 11px;
+  text-decoration: none
+}
+
+.contact-section {
+  padding-bottom: 0
+}
+
+.contact-email {
+  display: inline-flex;
+  gap: 24px;
+  font: 400 27px/1.5 var(--serif);
+  text-decoration: none;
+  margin: 10px 0
+}
+
+.contact-email span {
+  font: 20px/2 var(--sans)
+}
+
+.site-footer {
+  max-width: 1080px;
+  margin: 0 auto;
+  border-top: 1px solid var(--line);
+  padding: 23px 0 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: .3px
+}
+
+.site-footer a {
+  color: var(--muted);
+  text-decoration: none;
+  white-space: nowrap
+}
+
+.article-layout {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 65px 40px 90px;
+  display: grid;
+  grid-template-columns: 215px minmax(0,1fr);
+  gap: 65px;
+  align-items: start
+}
+
+.article-aside {
+  position: sticky;
+  top: 40px
+}
+
+.back-link {
+  font-size: 12px;
+  text-decoration: none
+}
+
+.page-toc {
+  border-top: 1px solid var(--line);
+  margin-top: 30px;
+  padding-top: 25px
+}
+
+.page-toc .eyebrow {
+  margin-bottom: 14px;
+  font-size: 9px
+}
+
+.page-toc a {
+  display: block;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--muted);
+  padding: 6px 0;
+  text-decoration: none
+}
+
+.page-toc a:hover {
+  color: var(--accent)
+}
+
+.article-content {
+  min-width: 0;
+  font-size: 15px
+}
+
+.article-content>h1 {
+  font: 400 43px/1.2 var(--serif);
+  letter-spacing: -1px;
+  margin: 0 0 30px
+}
+
+.article-content h2 {
+  font: 400 27px/1.4 var(--serif);
+  margin: 44px 0 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line)
+}
+
+.article-content h3 {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 32px 0 14px
+}
+
+.article-content p {
+  margin: 0 0 20px
+}
+
+.article-content li {
+  margin-bottom: 7px
+}
+
+.article-content .eyebrow {
+  margin-bottom: 18px
+}
+
+.headerlink {
+  opacity: 0;
+  font-size: .65em;
+  margin-left: 8px;
+  text-decoration: none
+}
+
+.home-content .headerlink {
+  display: none
+}
+
+h1:hover .headerlink,
+h2:hover .headerlink,
+h3:hover .headerlink,
+.headerlink:focus {
+  opacity: 1
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 20px 0 28px
+}
+
+th,
+td {
+  text-align: left;
+  vertical-align: top;
+  padding: 13px 12px;
+  border-bottom: 1px solid var(--line)
+}
+
+th {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  background: #f1f2ec
+}
+
+td:first-child {
+  white-space: nowrap
+}
+
+@media (min-width:1500px) {
+  .home-layout {
+    padding-top: 88px
+  }
+}
+
+@media (max-width:1000px) {
+  .home-layout {
+    grid-template-columns: 210px minmax(0,1fr);
+    gap: 50px
+  }
+
+  .article-layout {
+    grid-template-columns: 170px minmax(0,1fr);
+    gap: 40px
+  }
+
+  .site-footer {
+    margin-left: 40px;
+    margin-right: 40px
+  }
+
+  .site-nav {
+    gap: 22px
+  }
+
+  .header-inner {
+    gap: 25px
+  }
+}
+
+@media (max-width:740px) {
+  html {
+    scroll-padding-top: 24px
+  }
+
+  .header-inner {
+    min-height: 80px;
+    padding: 18px 24px;
+    gap: 22px;
+    flex-wrap: wrap
+  }
+
+  .wordmark {
+    font-size: 26px
+  }
+
+  .language-link {
+    margin-left: auto;
+    border: 0;
+    padding-left: 0
+  }
+
+  .site-nav {
+    order: 3;
+    flex: 1 0 100%;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 0
+  }
+
+  .site-nav a {
+    font-size: 12px;
+    padding: 3px 0 7px
+  }
+
+  .home-layout {
+    padding: 40px 24px 55px;
+    display: block
+  }
+
+  .profile {
+    position: static;
+    padding-bottom: 32px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: 65px minmax(0,1fr);
+    column-gap: 20px
+  }
+
+  .profile-mark {
+    width: 60px;
+    height: 60px;
+    font-size: 35px;
+    grid-column: 1;
+    grid-row: 1/3;
+    margin: 0
+  }
+
+  .profile h1 {
+    grid-column: 2;
+    font-size: 34px;
+    letter-spacing: -1px;
+    margin: 0 0 10px
+  }
+
+  .profile h1 span {
+    display: inline;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-left: 10px
+  }
+
+  .profile .profile-role {
+    grid-column: 2;
+    font-size: 13px;
+    margin-bottom: 15px
+  }
+
+  .profile-affiliation,
+  .profile-university {
+    grid-column: 2;
+    max-width: none!important
+  }
+
+  .profile .profile-affiliation {
+    margin-bottom: 6px
+  }
+
+  .profile-links {
+    grid-column: 1/-1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    border: 0;
+    padding-top: 0;
+    margin-top: 12px
+  }
+
+  .profile-links a {
+    gap: 8px;
+    font-size: 12px
+  }
+
+  .intro .intro-title {
+    font-size: 41px;
+    letter-spacing: -1.3px;
+    line-height: 1.16;
+    margin: 18px 0 23px
+  }
+
+  .eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.5px
+  }
+
+  .intro {
+    padding-bottom: 35px
+  }
+
+  .intro>p:not(.eyebrow) {
+    font-size: 14px
+  }
+
+  .academic-section {
+    padding: 28px 0 32px
+  }
+
+  .section-heading {
+    margin-bottom: 23px
+  }
+
+  .section-heading h2 {
+    font-size: 26px
+  }
+
+  .contact-email {
+    font-size: 25px;
+    gap: 14px
+  }
+
+  .site-footer {
+    margin: 0 24px;
+    padding-top: 22px;
+    flex-wrap: wrap;
+    gap: 12px
+  }
+
+  .site-footer>span {
+    max-width: 260px
+  }
+
+  .article-layout {
+    display: block;
+    padding: 32px 24px 55px
+  }
+
+  .article-aside {
+    position: static;
+    margin-bottom: 32px
+  }
+
+  .page-toc {
+    display: none
+  }
+
+  .article-content>h1 {
+    font-size: 34px
+  }
+
+  .article-content {
+    font-size: 14px
+  }
+
+  .article-content h2 {
+    font-size: 25px
+  }
+
+  .article-content h3 {
+    font-size: 17px
+  }
+
+  table {
+    font-size: 12px
+  }
+
+  th,
+  td {
+    padding: 11px 8px
+  }
+
+  .headerlink {
+    display: none
+  }
+}
+
+@media (max-width:360px) {
+  .site-nav {
+    gap: 10px
+  }
+
+  .site-nav a {
+    font-size: 11px
+  }
+
+  .intro .intro-title {
+    font-size: 35px
+  }
+
+  .contact-email {
+    font-size: 21px
+  }
+
+  .profile h1 {
+    font-size: 30px
+  }
+
+  .profile h1 span {
+    font-size: 14px
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior: auto
+  }
+
+  a {
+    transition: none
+  }
+}
+
+@media print {
+  body {
+    background: white;
+    color: black;
+    font-size: 11pt
+  }
+
+  .site-header,
+  .site-footer,
+  .profile-mark,
+  .profile-links,
+  .article-aside,
+  .headerlink,
+  .skip-link {
+    display: none
+  }
+
+  .home-layout,
+  .article-layout {
+    display: block;
+    padding: 0;
+    max-width: none
+  }
+
+  .profile {
+    position: static;
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 15px;
+    margin-bottom: 25px
+  }
+
+  .profile h1 span {
+    display: inline;
+    margin-left: 20px
+  }
+
+  .profile p {
+    margin: 3px 0
+  }
+
+  .intro-title {
+    font-size: 28pt!important
+  }
+
+  .academic-section {
+    break-inside: avoid;
+    padding: 20px 0
+  }
+
+  a {
+    color: inherit
+  }
+
+  .article-content h2 {
+    break-after: avoid
+  }
+}
