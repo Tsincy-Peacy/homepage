@@ -48,4 +48,4 @@ jobs:
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
       - name: Deploy to GitHub Pages
-        run: python -m mkdocs gh-deploy --strict
+        run: python -m mkdocs gh-deploy --strict --force
